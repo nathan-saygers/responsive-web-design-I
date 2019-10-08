@@ -1,3 +1,424 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+* {
+  max-width: 100%;
+}
+
+body {
+	max-width: 900px;
+	margin: auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+  margin: 5% 2%;
+  width: 100%;
+}
+
+footer {
+	text-align: center;
+	margin: 5% 0;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+.pageBreak {
+	border-top: black 1px solid;
+	width: 100%;
+	margin: 4% 0;
+}
+
+/* Shared Nav and Header*/
+.innovation {
+	font-size: 80px;
+	text-align: center;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation a{
+
+	text-decoration: none;
+	color: lightgray;
+}
+
+.logo-above {
+  display: none;
+}
+
+/*index.html  Headline of */
+.headline {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.subHeadline {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center
+}
+
+.headerImg {
+	width: 49%;
+	margin: 0 15%;
+}
+
+.getStarted {
+	width: 50%;
+	border: black 1px solid;
+	text-align: center;
+	margin: 0 40%;
+	padding: 2%;
+	font-size: 15px;
+}
+
+/* ndex.html Features, Services, and mid accent image of i*/
+.featuresBox {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.features {
+  width: 48%;
+}
+
+.midAccent {
+	margin: 5% 0;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+.servicesBox {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 5%;
+}
+
+.services {
+	width: 30%;
+}
+
+/* Index.html Contact section of  */
+
+.contact {
+	margin-top: 5% 2% 0 2%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Services.html css */
+/* services.html header and accent image */
+
+.servicesHeaderImg {
+	margin: 2% 0;
+	display: flex;
+	align-items: strech;
+}
+
+/* services.html Service Types section */
+
+.servicesTypes {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.subServices {
+	border: black solid 1px;
+	Width: 48%;
+	background-color: #F4F3F4;
+	margin: 1.75% 0;
+	padding: 10px; 
+}
+
+.learnMore {
+	margin: 4% 1.5% 1.5% 1%;
+	padding: 2% 3%;
+	width: 30%;
+	border: black 1px solid;
+	border-radius: 5px;
+}
+
+/* services.html ending tagline, list, and image */
+.pageBreakThick {
+	border-top: black 2px solid;
+	margin: 4% 0;
+}
+
+.someFacts {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.taglineFacts {
+	width: 45%;
+}
+
+.factsList {
+	margin-top: 3%;
+	list-style: square inside none;
+}
+
+.servicesInfoImg {
+	width: 45%;
+	margin-right: 2%;
+}
+
+/* Media Queries*/
+
+/* Tablet */
+@media (max-width: 768px){
+  body {
+    max-width: 680px;
+
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .headline {
+    display: flex;
+    max-width: 600px;
+	  justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+  }
+
+  .logo-above {
+    display: flex;
+    margin: 2%;
+  }
+
+  .logo-below {
+    display: none;
+  }
+
+  .headerImg {
+    display: none;
+  }
+
+  .contact {
+    margin: 5% 2% 0 2%;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
+
+/* Mobile */
+@media (max-width: 480px){
+  
+  body {
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
+  }
+/* Navigation */
+  .navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .navigation a{
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+    border-bottom: black solid 1px;
+    font-size: 18px;
+  }
+
+  .logo-above {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2%;
+    padding: 3%;
+    border-bottom: black solid 1px;
+  }
+
+  .logo-below {
+    display: none;
+  }
+
+/* Headline */
+  .innovation {
+    font-size: 60px;
+  }
+
+  .headline {
+    display: flex;
+    /* width: 300px; */
+	  justify-content: center;
+    align-items: center;
+    /* margin-right: 10%; */
+  }
+
+  .subHeadline {
+    flex-direction: column;
+  }
+
+  .headerImg {
+    display: none;
+  }
+
+/* Features, Services, Mid-page accent */
+
+  .featuresBox {
+  display: flex;
+  width: 300px;
+  margin: 0 10%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start
+  }
+
+  .features {
+    width: 80%;
+    margin: 2% 2%;
+  }
+
+  /* .midAccent {
+    display: flex;
+ 
+    margin: 5% 0;
+  }
+
+  .middle-img {
+    width: 100%;
+  } */
+
+  .servicesBox {
+  display: flex;
+  width: 300px;
+  margin: 0 10%;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  margin-bottom: 5%;
+  }
+
+  .services {
+  width: 80%;
+  margin: 2% 2%;
+  }
+
+/* Pagebreak */
+  .pageBreak {
+    border-top: black 2px solid;
+    width: 100%;
+    margin: 4% 0;
+  }
+}
+
+.contact-section {
+  max-width: 300px;
+  margin: 0 10%;
+}
